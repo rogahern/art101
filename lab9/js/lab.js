@@ -1,8 +1,3 @@
-/*
-    Lab 9
-    Experiment with DOM manipulation
-*/
-
 // Get the output div
 var outputEl = document.getElementById('output');
 
@@ -18,6 +13,4 @@ new2El.innerHTML = 'This is the new paragraph 2.';
 outputEl.appendChild(new1El);
 outputEl.appendChild(new2El);
 
-// Change the CSS attributes of two elements
-document.getElementById('challenge').style.color = 'red';
-document.getElementById('problems').style.backgroundColor = 'yellow';
+//

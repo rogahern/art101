@@ -1,28 +1,14 @@
+/* Existing CSS */
 body {
     background-color: #FF007B;
     font-family: 'Orbitron', sans-serif;
-    color: #0ABBD6;
+    color: #06272d;
+}
+/* ... */
+
+/* New CSS */
+#debugging {
+    color: white;
+    background-color: black;
 }
 
-.section {
-    border: 2px solid #0ABBD6;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: #000000;
-    border-radius: 5px;
-}
-
-h1 {
-    color: #0ABBD6;
-    text-shadow: 2px 2px #66023C;
-}
-
-h2 {
-    color: #66023C;
-    text-shadow: 1px 1px #0a6371;
-}
-
-p {
-    color: #FFFFFF;
-    text-shadow: 1px 1px #0c6674;
-}
