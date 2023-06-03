@@ -1,31 +1,27 @@
-$(document).ready(function() {
-    // SortingHat function
-    function sortingHat(str) {
-        let length = str.length;
-        let mod = length % 4;
-        let house;
+/* 
+Lab 12 JavaScript
+Sorting Hat Functionality
+*/
 
-        switch(mod) {
-            case 0:
-                house = "Gryffindor";
-                break;
-            case 1:
-                house = "Ravenclaw";
-                break;
-            case 2:
-                house = "Slytherin";
-                break;
-            default:
-                house = "Hufflepuff";
-                break;
-        }
-        return house;
+function sortingHat(str) {
+    let length = str.length;
+    let mod = length % 4;
+
+    // Conditional block returning different houses based on mod value
+    if (mod === 0) {
+        return "Gryffindor";
+    } else if (mod === 1) {
+        return "Ravenclaw";
+    } else if (mod === 2) {
+        return "Slytherin";
+    } else {
+        return "Hufflepuff";
     }
+}
 
-    // Event listener
-    $("#button").click(function() {
-        let name = $("#input").val();
-        let house = sortingHat(name);
-        $("#output").append("<p>The Sorting Hat has sorted you into " + house + "</p>");
-    });
+// Add event listener to the button
+$('#button').click(function() {
+    let name = $('#input').val();
+    let house = sortingHat(name);
+    $('#output').append(`<p style="color: red;">The Sorting Hat has sorted you into ${house}</p>`);
 });
