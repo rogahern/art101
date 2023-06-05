@@ -1,27 +1,30 @@
-/* 
+/*
 Lab 12 JavaScript
 Sorting Hat Functionality
 */
 
-function sortingHat(str) {
-    let length = str.length;
-    let mod = length % 4;
+var houses = {
+    "Gryffindor": "Known for bravery, nerve, and chivalry. Gryffindor's mascot is the lion, and its colors are scarlet and gold.",
+    "Ravenclaw": "Known for intelligence and wisdom. Ravenclaw's mascot is the eagle, and its colors are blue and bronze (or silver in the films).",
+    "Slytherin": "Known for cunning and ambition. Slytherin's mascot is the serpent, and its colors are green and silver.",
+    "Hufflepuff": "Known for dedication, hard work and loyalty. Hufflepuff's mascot is the badger, and its colors are yellow and black."
+};
 
-    // Conditional block returning different houses based on mod value
-    if (mod === 0) {
-        return "Gryffindor";
-    } else if (mod === 1) {
-        return "Ravenclaw";
-    } else if (mod === 2) {
-        return "Slytherin";
-    } else {
-        return "Hufflepuff";
-    }
+function sortingHat(str) {
+    var length = str.length;
+    var mod = length % 4;
+
+    var houseArray = ["Gryffindor", "Ravenclaw", "Slytherin", "Hufflepuff"];
+    var house = houseArray[mod];
+    return [house, houses[house]];
 }
 
-// Add event listener to the button
-$('#button').click(function() {
-    let name = $('#input').val();
-    let house = sortingHat(name);
-    $('#output').append(`<p style="color: red;">The Sorting Hat has sorted you into ${house}</p>`);
+document.getElementById('button').addEventListener('click', function() {
+    var name = document.getElementById('input').value;
+    var houseInfo = sortingHat(name);
+    var outputDiv = document.getElementById('output');
+    var newParagraph = document.createElement('p');
+    newParagraph.style.color = "red";
+    newParagraph.textContent = "The Sorting Hat has sorted you into " + houseInfo[0] + ". " + houseInfo[1];
+    outputDiv.appendChild(newParagraph);
 });
