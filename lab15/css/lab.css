@@ -1,0 +1,61 @@
+body {
+    background: #120136;  /* dark mystical blue */
+    color: #f8f1ff;  /* off-white */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+}
+
+#content {
+    background: #29274c;  /* deep purple */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 5px rgba(100,100,100,0.5); /* a bit of a glow around the edges */
+}
+
+h1 {
+    color: #f7b2b7;  /* magical pink */
+    text-shadow: 2px 2px 4px #917394;  /* slight glow */
+}
+
+p {
+    line-height: 1.6;
+}
+
+#input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+#button {
+    background: #b392ac;  /* dusty purple */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-shadow: 1px 1px 3px #826481;  /* slight glow */
+}
+
+#button:hover {
+    background: #826481;  /* darker dusty purple */
+}
+
+#output {
+    margin-top: 30px;
+}
+
+#output p {
+    font-style: italic;
+}
+
+p[style*="color: red"] {
+    color: #ff4b5c; /* intense red */
+}
+
+p[style*="color: green"] {
+    color: #02c39a; /* vibrant green */
+}
+
